@@ -10,8 +10,6 @@ import { Map } from 'immutable'
  * @type {Object}
  */
 
-const EMPTY_MAP = new Map()
-
 const Data = {
 
   /**
@@ -24,7 +22,7 @@ const Data = {
   create(properties = {}) {
     return Map.isMap(properties)
       ? properties
-      : EMPTY_MAP.merge(properties)
+      : new Map(properties)
   }
 
 }
